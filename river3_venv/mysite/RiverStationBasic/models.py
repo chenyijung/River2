@@ -16,5 +16,5 @@ class RiverStation(models.Model):
     stationModeRiverside = models.CharField(max_length=10) #採樣方式（岸邊）
     monitorItem = models.CharField(max_length=10) #監測項目
 
-    def __str__(self):
-        return self.name
+#    def __str__(self):
+#        return self.name
