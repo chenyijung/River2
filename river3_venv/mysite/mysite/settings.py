@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'RiverStationBasic',
+    'BeachData',
+    'OceanData',
     'import_export', #加入django-import-export套件
 
 )
