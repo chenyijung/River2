@@ -9,3 +9,4 @@ class RiverResourceAdmin(resources.ModelResource):
     class Meta:
         model = RiverStation
 admin.site.register(RiverStation, RiverResourceAdmin)
+#tset
