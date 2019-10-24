@@ -1,12 +1,13 @@
+#RiverStation admin.py
 from django.contrib import admin
 
 # Register your models here.
-from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 from .models import RiverStation
 
-class RiverResourceAdmin(resources.ModelResource):
-    list_display = ("riverName", "areaName", "stationName", "riverStandard", "riverstationNumber", "distanceKM", "stationAddress", "stationLocationEast", "stationLocationNorth", "stationModeBridge", "stationModeRiver", "stationModeRiverside","monitorItem")
-    class Meta:
-        model = RiverStation
-admin.site.register(RiverStation, RiverResourceAdmin)
-#tset
+
+@admin.Register(RiverStation)
+class RiverStationAdmin(ImportExportModelAdmin):
+    pass
+
+admin.site.register(RiverStation,RiverStationAdmin)
