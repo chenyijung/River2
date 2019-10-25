@@ -8,4 +8,5 @@ from BeachData.models import BeachDataModel
 # Register your models here.
 @admin.register(BeachDataModel)
 class BeachDataAdmin(ImportExportModelAdmin):
-    pass
+    list_display = ('riverName', 'areaName', 'stationName', 'riverStandard', 'riverstationNumber', 'distanceKM', 'stationAddress', 'stationLocationEast', 'stationLocationNorth', 'stationModeBridge', 'stationModeRiver', 'stationModeRiverside','monitorItem')
+    
