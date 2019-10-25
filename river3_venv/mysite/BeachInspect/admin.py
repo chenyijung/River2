@@ -1,3 +1,12 @@
+#RiverStation admin.py
 from django.contrib import admin
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
+
+from BeachInspect.models import BeachInspectModel
+
 
 # Register your models here.
+@admin.register(BeachInspectModel)
+class BeachDataAdmin(ImportExportModelAdmin):
+        list_display=('riverName','stationName','riverstationNumber','riverStandard','inspectDate','inspectTime','inspectAirTemp','inspectCMS','inspectWaterTemp','inspectPH','inspectO2','inspectTN','inspectTP','inspectBOD','inspectCOD','inspectSS','inspectCd','inspectPb','inspectCr','inspectNi','inspectCu','inspectZn','inspectMn','inspectEle','inspectCFU','inspectMPN','inspectN2','inspectPSU','inspectNTU','inspectPO34','inspectSixOy','inspectNO3N','inspectNO2N','inspectComment')
