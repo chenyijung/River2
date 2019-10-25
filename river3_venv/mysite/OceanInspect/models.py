@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class OceanInspect(models.Model):
+class OceanInspectModel(models.Model):
     riverName = models.CharField(max_length=10,null=True) #河川名稱
     stationName = models.CharField(max_length=10,null=True) #監測站名稱
     riverstationNumber = models.IntegerField(default=0,null=True) #監測站編號
