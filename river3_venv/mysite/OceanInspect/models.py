@@ -36,3 +36,6 @@ class OceanInspectModel(models.Model):
     inspectNO3N = models.FloatField(null=True) #硝酸鹽氮
     inspectNO2N = models.FloatField(null=True) #亞硝酸鹽氮
     inspectComment = models.TextField(max_length=100,null=True)#備註
+
+class OceanInspectExport(models.Model):
+    TestName = models.CharField(max_length=10,null=True)
