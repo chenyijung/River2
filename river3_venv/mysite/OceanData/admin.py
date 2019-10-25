@@ -8,4 +8,5 @@ from OceanData.models import OceanDataModel
 # Register your models here.
 @admin.register(OceanDataModel)
 class OceanDataAdmin(ImportExportModelAdmin):
-    pass
+    list_display = ('riverName', 'areaName', 'stationName', 'riverStandard', 'riverstationNumber', 'distanceKM', 'stationAddress', 'stationLocationEast', 'stationLocationNorth', 'stationModeBridge', 'stationModeRiver', 'stationModeRiverside','monitorItem')
+    
