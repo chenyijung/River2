@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'BeachData',
     'OceanData',
     'RiverInspect',
+    'OceanInspect',
+    'BeachInspect',
     'import_export', #加入django-import-export套件
 
 )
