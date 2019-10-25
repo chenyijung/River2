@@ -1,13 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class RiverInspect(models.Model):
+class RiverInspectModel(models.Model):
     riverName = models.CharField(max_length=10,null=True) #河川名稱
     stationName = models.CharField(max_length=10,null=True) #監測站名稱
     riverstationNumber = models.IntegerField(default=0,null=True) #監測站編號
     riverStandard = models.CharField(max_length=10,null=True) #水體分類等級
-    inspectDate = models.DataTimeField(null=True) #採樣日期
-    inspectTime = models.DataTimeField(null=True) #採樣時間
+    inspectDate = models.DateField(null=True) #採樣日期
+    inspectTime = models.TimeField(null=True) #採樣時間
     inspectAirTemp = models.FloatField(null=True) #氣溫
     inspectCMS = models.FloatField(null=True) #水流量
     inspectWaterTemp = models.FloatField(null=True) #水溫
@@ -25,7 +25,7 @@ class RiverInspect(models.Model):
     inspectCu = models.FloatField(null=True) #銅
     inspectZn = models.FloatField(null=True) #鋅
     inspectMn = models.FloatField(null=True) #錳
-    inspectEle = models.FloatField(null=True) #導電度
+    inspectEle = models.IntegerField(default=0,null=True) #導電度
     inspectCFU = models.FloatField(null=True) #大腸桿菌群
     inspectAnionic = models.FloatField(null=True)#陰離子界面活性劑
     inspectN2 = models.FloatField(null=True) #氨氣

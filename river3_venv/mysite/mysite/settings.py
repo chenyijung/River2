@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'RiverStationBasic',
     'BeachData',
     'OceanData',
+    'RiverInspect',
     'import_export', #加入django-import-export套件
 
 )
