@@ -17,4 +17,4 @@ class OceanDataAdmin(ImportExportModelAdmin):
         'inspectNTU','inspectPO34','inspectSixOy','inspectNO3N','inspectNO2N','inspectComment')
 @admin.register(OceanInspectExport)
 class OceanInspectExport(ImportExportModelAdmin):
-        list_display=('TestName',)
+        list_display=('TestDataEX',)
