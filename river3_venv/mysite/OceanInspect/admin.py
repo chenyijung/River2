@@ -3,7 +3,7 @@ from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
-from OceanInspect.models import OceanInspectModel,OceanInspectExport
+from OceanInspect.models import OceanInspectModel
 
 
 # Register your models here.
@@ -15,6 +15,3 @@ class OceanDataAdmin(ImportExportModelAdmin):
         'inspectTP','inspectBOD','inspectCOD','inspectSS','inspectCd','inspectPb','inspectCr','inspectNi',
         'inspectCu','inspectZn','inspectMn','inspectEle','inspectCFU','inspectMPN','inspectN2','inspectPSU',
         'inspectNTU','inspectPO34','inspectSixOy','inspectNO3N','inspectNO2N','inspectComment')
-@admin.register(OceanInspectExport)
-class OceanInspectExport(ImportExportModelAdmin):
-        list_display=('TestName',)

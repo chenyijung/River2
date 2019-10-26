@@ -36,3 +36,12 @@ class RiverInspectModel(models.Model):
     inspectNO3N = models.FloatField(null=True)#硝酸鹽氮
     inspectNO2N = models.FloatField(null=True)#亞硝酸鹽氮
     inspectComment = models.TextField(max_length=100,null=True)
+
+class RiverInspectExport(models.Model):
+    stationName = models.CharField(max_length=10,null=True)
+    inspectO2 = models.FloatField(null=True)
+    inspectBOD = models.FloatField(null=True)
+    inspectSS = models.FloatField(null=True)
+    inspectN2 = models.FloatField(null=True)
+    RPI_Point= models.FloatField(null=True)
+    RPI_Result= models.TextField(max_length=100,null=True)
