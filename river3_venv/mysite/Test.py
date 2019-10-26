@@ -5,36 +5,18 @@ import sqlite3
 import pandas as pd
 conn = sqlite3.connect('db.sqlite3')
 #cursor = conn.execute("riverName")
-df=pd.read_sql_query("select * from RiverInspect_riverinspectmodel ", conn)
-#print("\n BEFORE \n" ,df)
+df=pd.read_sql_query("select * from RiverStationBasic_RiverStation ", conn)
+print("\n BEFORE \n" ,df)
 
-        
-#print(df.index.stop)
-#for i in range(int(df.index)):
-#    print(i)
+table_length=len(df)
+i=0
 
-test_filter = df.loc [7,'inspectO2']
+while i<table_length:
+    print(df.loc[i,"id"],"\n")
+    i=i+1
 
-point = 0
+df_export.loc[]=df
+df_export.to_sql('OceanInspect_oceaninstpectexport',conn,if_exists='append')
 
-if (test_filter<7):
-    print("小於7")
-    point=point+1
-else:
-    print("大於7")
-    point=point+2
-#df[ df['riverName']=='旱溪'] ]
-
-print(test_filter)
-print("點數為",point)
-
-
-
-#i=0
-
-#while i!=1:
-#    print(df.loc[i,"TestData1"],"\n")
-#    i=i+1
-
+print("***df***\n",df_export)
 #print ("Name = " , row[0])
-
