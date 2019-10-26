@@ -16,7 +16,7 @@ class OceanDataModel(models.Model):
         stationModeRiverside = models.CharField("採樣方式（岸邊）",max_length=10,null=True) #採樣方式（岸邊）
         monitorItem = models.TextField("監測項目",max_length=100,null=True) #監測項目
         class Meta:
-            verbose_name="海洋報表"
-            verbose_name_plural="海洋報表"    
+            verbose_name="海洋測站基本資料"
+            verbose_name_plural="海洋測站基本資料"    
 #        def __str__(self):
 #            return self.name

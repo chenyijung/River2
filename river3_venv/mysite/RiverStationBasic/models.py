@@ -18,8 +18,8 @@ class RiverStation(models.Model):
     monitorItem = models.TextField("監測項目",max_length=100,null=True) #監測項目
 
     class Meta:
-        verbose_name="河川報表"
-        verbose_name_plural="河川報表"
+        verbose_name="河川測站基本資料"
+        verbose_name_plural="河川測站基本資料"
 
 #    def __str__(self):
 #       return self.name

@@ -37,8 +37,8 @@ class RiverInspectModel(models.Model):
     inspectNO2N = models.FloatField("亞硝酸鹽氮",null=True)#亞硝酸鹽氮
     inspectComment = models.TextField("備註",max_length=100,null=True) #備註
     class Meta:
-        verbose_name="監測河川"
-        verbose_name_plural="監測河川"
+        verbose_name="河川監測報表"
+        verbose_name_plural="河川監測報表"
 
 class RiverInspectExport(models.Model):
     stationName = models.CharField("河川名稱",max_length=10,null=True) #河川名稱
@@ -49,5 +49,8 @@ class RiverInspectExport(models.Model):
     RPI_Point= models.FloatField("RPI值",null=True) #RPI值
     RPI_Result= models.TextField("污染程度",max_length=100,null=True) #污染程度
     class Meta:
-        verbose_name="監測河川(輸出表)"
-        verbose_name_plural="監測河川(輸出表)"
+        verbose_name="河川監測(RPI輸出表)"
+        verbose_name_plural="河川監測(RPI輸出表)"
+
+class RiverInspectExportWQI(models.Model)
+    
