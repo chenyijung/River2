@@ -1,7 +1,7 @@
 #RiverStation admin.py
 from django.contrib import admin
 from import_export import resources
-from import_export.admin import ImportExportModelAdmin
+from import_export.admin import ImportExportModelAdmin,ExportActionMixin
 
 from BeachData.models import BeachDataModel
 
@@ -9,4 +9,3 @@ from BeachData.models import BeachDataModel
 @admin.register(BeachDataModel)
 class BeachDataAdmin(ImportExportModelAdmin):
     list_display = ('riverName', 'areaName', 'stationName', 'riverStandard', 'riverstationNumber', 'distanceKM', 'stationAddress', 'stationLocationEast', 'stationLocationNorth', 'stationModeBridge', 'stationModeRiver', 'stationModeRiverside','monitorItem')
-    

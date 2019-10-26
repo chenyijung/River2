@@ -1,7 +1,7 @@
 #RiverStation admin.py
 from django.contrib import admin
 from import_export import resources
-from import_export.admin import ImportExportModelAdmin
+from import_export.admin import ImportExportModelAdmin,ExportActionMixin
 
 from OceanInspect.models import OceanInspectModel
 
@@ -9,7 +9,7 @@ from OceanInspect.models import OceanInspectModel
 # Register your models here.
 @admin.register(OceanInspectModel)
 
-class OceanDataAdmin(ImportExportModelAdmin):
+class OceanDataAdmin(ExportActionMixin,ImportExportModelAdmin):
         list_display=('riverName','stationName','riverstationNumber','riverStandard','inspectDate',
         'inspectTime','inspectAirTemp','inspectCMS','inspectWaterTemp','inspectPH','inspectO2','inspectTN',
         'inspectTP','inspectBOD','inspectCOD','inspectSS','inspectCd','inspectPb','inspectCr','inspectNi',
