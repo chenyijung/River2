@@ -50,7 +50,7 @@ def RPI(O2,BOD,SS,N2):
     RPI_point=(O2_point+BOD_point+SS_point+N2_point)/4
     return (RPI_point)
 
-def Rule_O2(O2):
+def RPI_O2(O2):
         O2_point=0
         BOD_point=0
         SS_point=0
@@ -66,7 +66,7 @@ def Rule_O2(O2):
 
         return (O2_point)
 
-def Rule_BOD(BOD):
+def RPI_BOD(BOD):
         O2_point=0
         BOD_point=0
         SS_point=0
@@ -81,7 +81,7 @@ def Rule_BOD(BOD):
            BOD_point=10
         return BOD_point
 
-def Rule_SS(SS):
+def RPI_SS(SS):
         O2_point=0
         BOD_point=0
         SS_point=0
@@ -97,7 +97,7 @@ def Rule_SS(SS):
         return SS_point
 
 
-def Rule_N2(N2):
+def RPI_N2(N2):
         O2_point=0
         BOD_point=0
         SS_point=0

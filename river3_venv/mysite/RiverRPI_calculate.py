@@ -20,10 +20,10 @@ while i<length_table:   #定義迴圈終點
 #    print("\n DF_RAW == ",df.loc[i,"inspectO2"],"==")
 #    print("\n IR_point == ",IR.RPI(df.loc[i,"inspectO2"],df.loc[i,"inspectBOD"],df.loc[i,"inspectSS"],df.loc[i,"inspectN2"]) ,"==\n")
     df_export.loc[i,"stationName"]=df.loc[i,"stationName"]
-    df_export.loc[i,"inspectO2"]=IR.Rule_O2(df.loc[i,"inspectO2"])
-    df_export.loc[i,"inspectBOD"]=IR.Rule_BOD(df.loc[i,"inspectBOD"])
-    df_export.loc[i,"inspectSS"]=IR.Rule_SS(df.loc[i,"inspectSS"])
-    df_export.loc[i,"inspectN2"]=IR.Rule_N2(df.loc[i,"inspectN2"])
+    df_export.loc[i,"inspectO2"]=IR.RPI_O2(df.loc[i,"inspectO2"])
+    df_export.loc[i,"inspectBOD"]=IR.RPI_BOD(df.loc[i,"inspectBOD"])
+    df_export.loc[i,"inspectSS"]=IR.RPI_SS(df.loc[i,"inspectSS"])
+    df_export.loc[i,"inspectN2"]=IR.RPI_N2(df.loc[i,"inspectN2"])
     df_export.loc[i,"RPI_Point"]=IR.RPI(df.loc[i,"inspectO2"],df.loc[i,"inspectBOD"],df.loc[i,"inspectSS"],df.loc[i,"inspectN2"])  #將資料轉入新table
     df_export.loc[i,"RPI_Result"]=IR.RPIInspect(df_export.loc[i,"RPI_Point"])  #將資料轉入新table
 

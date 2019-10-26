@@ -36,26 +36,32 @@ class RiverInspectModel(models.Model):
     inspectNO3N = models.FloatField("硝酸鹽氮",null=True)#硝酸鹽氮
     inspectNO2N = models.FloatField("亞硝酸鹽氮",null=True)#亞硝酸鹽氮
     inspectComment = models.TextField("備註",max_length=100,null=True) #備註
-
-
+    class Meta:
+        verbose_name="河川監測報表"
+        verbose_name_plural="河川監測報表"
 class RiverInspectExport(models.Model):
     stationName = models.CharField("河川名稱",max_length=10,null=True) #河川名稱
-    inspectO2 = models.FloatField("溶氧量",null=True) #溶氧量
-    inspectBOD = models.FloatField("生化需氧量",null=True) #生化需氧量
-    inspectSS = models.FloatField("懸浮固體",null=True) #懸浮固體
-    inspectN2 = models.FloatField("氨氣",null=True) #氨氣
+    inspectO2 = models.FloatField("溶氧量(點數)",null=True) #溶氧量
+    inspectBOD = models.FloatField("生化需氧量(點數)",null=True) #生化需氧量
+    inspectSS = models.FloatField("懸浮固體(點數)",null=True) #懸浮固體
+    inspectN2 = models.FloatField("氨氣(點數)",null=True) #氨氣
     RPI_Point= models.FloatField("RPI值",null=True) #RPI值
     RPI_Result= models.TextField("污染程度",max_length=100,null=True) #污染程度
+    class Meta:
+        verbose_name="河川監測RPI(輸出)"
+        verbose_name_plural="河川監測RPI(輸出)"
 
-
-class RiverInspectExportWQI(model.Models):
+class RiverInspectExportWQI(models.Model):
     stationName = models.CharField("水質測站",max_length=10,null=True) #監測站名稱
-    inspectPH = models.FloatField("PH值",null=True) #PH值
-    inspectO2 = models.FloatField("溶氧量",null=True) #溶氧量
-    inspectBOD = models.FloatField("生化需氧量",null=True) #生化需氧量
-    inspectSS = models.FloatField("懸浮固體",null=True) #懸浮固體
-    inspectCFU = models.FloatField("大腸桿菌群",null=True) #大腸桿菌群
-    inspectN2 = models.FloatField("氨氣",null=True) #氨氣
-    inspectTP = models.FloatField("總磷",null=True) #總磷
-    riverStandardPoint = models.FloatField("水體分類等級",max_length=10,null=True) #水體分類等級-點數
+    inspectPH = models.FloatField("PH值(點數)",null=True) #PH值
+    inspectO2 = models.FloatField("溶氧量(點數)",null=True) #溶氧量
+    inspectBOD = models.FloatField("生化需氧量(點數)",null=True) #生化需氧量
+    inspectSS = models.FloatField("懸浮固體(點數)",null=True) #懸浮固體
+    inspectCFU = models.FloatField("大腸桿菌群(點數)",null=True) #大腸桿菌群
+    inspectN2 = models.FloatField("氨氣(點數)",null=True) #氨氣
+    inspectTP = models.FloatField("總磷(點數)",null=True) #總磷
+    riverStandardPoint = models.FloatField("水體分類等級(點數)",max_length=10,null=True) #水體分類等級-點數
     riverStandard = models.CharField("水體分類",max_length=10,null=True) #水體分類
+    class Meta:
+        verbose_name="河川監測WQI(輸出)"
+        verbose_name_plural="河川監測WQI(輸出)"
