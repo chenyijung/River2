@@ -23,7 +23,7 @@ class RiverInspectExportAdmin(ExportActionMixin,ImportExportModelAdmin):
 
 @admin.register(RiverInspectExportWQI)
 class RiverInspectExportWQIAdmin(ExportActionMixin,ImportExportModelAdmin):
-        list_display=('stationName','inspectO2','inspectBOD','inspectSS','inspectN2','RPI_Point','RPI_Result')
+        list_display=('stationName','inspectPH','inspectO2','inspectBOD','inspectSS','inspectCFU','inspectN2','inspectTP','riverStandardPoint','riverStandard')
 
 
 
