@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class RiverStation(models.Model):
-    riverName = models.CharField(max_length=10) #河川名稱
+    riverName = models.CharField("河川名",max_length=10) #河川名稱
+
     areaName = models.CharField(max_length=10) #流域別
     stationName = models.CharField(max_length=10) #監測站名稱
     riverStandard = models.CharField(max_length=10,null=True) #水體分類標準
@@ -15,7 +16,6 @@ class RiverStation(models.Model):
     stationModeRiver = models.CharField(max_length=10,null=True) #採樣方式（河中）
     stationModeRiverside = models.CharField(max_length=10,null=True) #採樣方式（岸邊）
     monitorItem = models.TextField(max_length=100,null=True) #監測項目
-
 
 #    def __str__(self):
 #       return self.name
