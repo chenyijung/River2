@@ -220,3 +220,16 @@ def WQI_TP(TP):
 def WQI_level(WQI_PH,WQI_O2,WQI_BOD,WQI_SS,WQI_CFU,WQI_N2,WQI_TP):
     maxpoint=max(WQI_PH,WQI_O2,WQI_BOD,WQI_SS,WQI_CFU,WQI_N2,WQI_TP)
     return maxpoint
+
+
+def WQI_rate(point):
+    if point==5:
+        return '戊'
+    if point==4:
+        return '丁'
+    if point==3:
+        return '丙'
+    if point==2:
+        return '乙'
+    if point==1:
+        return '甲'
