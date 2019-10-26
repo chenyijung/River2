@@ -15,3 +15,6 @@ class BeachDataModel(models.Model):
         stationModeRiver = models.CharField("採樣方式（河中）",max_length=10,null=True) #採樣方式（河中）
         stationModeRiverside = models.CharField("採樣方式（岸邊）",max_length=10,null=True) #採樣方式（岸邊）
         monitorItem = models.TextField("監測項目",max_length=100,null=True) #監測項目
+        class Meta:
+            verbose_name="海灘報表"
+            verbose_name_plural="海攤報表"    

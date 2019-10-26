@@ -36,3 +36,6 @@ class OceanInspectModel(models.Model):
     inspectNO3N = models.FloatField("硝酸鹽氮",null=True) #硝酸鹽氮
     inspectNO2N = models.FloatField("亞硝酸鹽氮",null=True) #亞硝酸鹽氮
     inspectComment = models.TextField("備註",max_length=100,null=True)#備註
+    class Meta:
+        verbose_name="海洋監測報表"
+        verbose_name_plural="海洋監測報表"        
