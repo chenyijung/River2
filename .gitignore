@@ -108,7 +108,11 @@ venv.bak/
 
 # Spyder project settings
 .spyderproject
+<<<<<<< HEAD
 .spyproject
+=======
+.spyprojects
+>>>>>>> be15cf9306c063344837965481d6235e780a977f
 
 # Rope project settings
 .ropeproject
@@ -123,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
+=======
+#nothing
+>>>>>>> be15cf9306c063344837965481d6235e780a977f

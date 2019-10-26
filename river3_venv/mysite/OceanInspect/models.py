@@ -38,4 +38,4 @@ class OceanInspectModel(models.Model):
     inspectComment = models.TextField(max_length=100,null=True)#備註
 
 class OceanInspectExport(models.Model):
-    TestDataEX = models.IntegerField(null=True)
+    TestName = models.IntegerField(null=True)
